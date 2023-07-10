@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nishan_profile/constants/app_icons.dart';
+import 'package:nishan_profile/view/test_screen.dart';
 import '../../../constants/app_font_styles.dart';
 
 class WelcomeScreenWidget extends StatefulWidget {
@@ -30,16 +31,16 @@ class _WelcomeScreenWidgetState extends State<WelcomeScreenWidget> {
           IconButton(
             onPressed: (){}, 
             icon: Icon(Icons.home)),
-           Text('ABOUT',
+           Text('ABOUTs',
            style:AppFonts.topRowFont,),
            Padding(
              padding:  EdgeInsets.symmetric(horizontal: maxwidth*.01,),
              child: InkWell(
               onTap: () {
-                
+              // Navigator.push(context, MaterialPageRoute(builder:(context) => TestScreen(),));
               },
               onHover: (value) {
-
+        
                 setState(() {
                   isHovered = value;
                 });

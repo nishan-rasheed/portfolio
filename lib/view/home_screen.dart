@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nishan_profile/view/test_screen.dart';
 
 import '../constants/app_color.dart';
 import 'home/widgets/project_screen.dart';
@@ -13,16 +14,24 @@ class HomeScreen extends StatelessWidget {
     final maxwidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body:
+      SingleChildScrollView(
+        child: Column(
+          children: [
+            WelcomeScreenWidget(),
+            ProjectsSection()
+          ],
+        ),
+      )
       // ScrollingListView(),
-       PageView(
-        // pageSnapping: false,
-        physics: PageScrollPhysics(),
-        scrollDirection: Axis.vertical,
-        children: [
-           WelcomeScreenWidget(),
-           ProjectScreen()
-        ],
-      ),
+      //  PageView(
+      //   // pageSnapping: false,
+      //   physics: PageScrollPhysics(),
+      //   scrollDirection: Axis.vertical,
+      //   children: [
+      //      WelcomeScreenWidget(),
+      //      ProjectScreen()
+      //   ],
+      // ),
     );
   }
 }
