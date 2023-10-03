@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:nishan_profile/view/test_screen.dart';
 
-import '../constants/app_color.dart';
-import 'home/widgets/project_screen.dart';
-import 'home/widgets/welcome_screen.dart';
+import '../../../constants/app_color.dart';
+import 'widgets/project_screen.dart';
+import 'widgets/welcome_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -22,6 +22,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       )
+      
       // ScrollingListView(),
       //  PageView(
       //   // pageSnapping: false,
