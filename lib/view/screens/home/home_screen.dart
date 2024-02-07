@@ -10,18 +10,23 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final maxHeight = MediaQuery.of(context).size.height;
-    final maxwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      body:
-      SingleChildScrollView(
+      appBar: ,
+      body:SingleChildScrollView(
         child: Column(
           children: [
-            WelcomeScreenWidget(),
-            ProjectsSection()
+          
           ],
         ),
       )
+      // SingleChildScrollView(
+      //   child: Column(
+      //     children: [
+      //       WelcomeScreenWidget(),
+      //       ProjectsSection()
+      //     ],
+      //   ),
+      // )
       
       // ScrollingListView(),
       //  PageView(
