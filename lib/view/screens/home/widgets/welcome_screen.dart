@@ -80,27 +80,27 @@ class _WelcomeScreenWidgetState extends State<WelcomeScreenWidget> {
        ),
     
     
-       Text('Hello, I\'m Nishan Rasheed\na flutter developer',
-       style: GoogleFonts.nunitoSans(
-        fontSize: 67,
-        fontWeight: FontWeight.w500,
-        color: Colors.black
-       ),),
-       Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-         children: [
-           Container(color: Colors.amber,
-            width: maxwidth*.6,
-             child: Text('I am a frontend developer who loves to work on the web. I am passionate about building simple and elegant solutions to complex problems.',
-             style: TextStyle(
-              fontSize:40,
-              fontWeight: FontWeight.normal,
-              color: Colors.black
-             ),),
-           ),
-           CustomButtonWidget(title: 'resume')
-         ],
-       ),
-
+      //  Text('Hello, I\'m Nishan Rasheed\na flutter developer',
+      //  style: GoogleFonts.nunitoSans(
+      //   fontSize: 67,
+      //   fontWeight: FontWeight.w500,
+      //   color: Colors.black
+      //  ),),
+      //  Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //    children: [
+      //      Container(color: Colors.amber,
+      //       width: maxwidth*.6,
+      //        child: Text('I am a frontend developer who loves to work on the web. I am passionate about building simple and elegant solutions to complex problems.',
+      //        style: TextStyle(
+      //         fontSize:40,
+      //         fontWeight: FontWeight.normal,
+      //         color: Colors.black
+      //        ),),
+      //      ),
+      //      CustomButtonWidget(title: 'resume')
+      //    ],
+      //  ),
+      CustomButtonWidget(title: 'resume'),
        Align(
         alignment: Alignment.center,
          child: Text('Swipe down to see my projects',

@@ -112,14 +112,16 @@ class _CustomButtonWidgetState extends State<CustomButtonWidget>
         child: ElevatedButton(
           onPressed: widget.onPressed,
           style: widget.buttonStyle ?? defaultButtonStyle,
-          child: widget.hasIcon
-              ? Stack(
-                  children: [
-                    animatedBackground(),
-                    childWithIcon(),
-                  ],
-                )
-              : Stack(
+          child: 
+          // widget.hasIcon
+          //     ? Stack(
+          //         children: [
+          //           animatedBackground(),
+          //           childWithIcon(),
+          //         ],
+          //       )
+          //     : 
+              Stack(
                   children: [
                     animatedBackground(),
                     Center(
@@ -167,7 +169,7 @@ class _CustomButtonWidgetState extends State<CustomButtonWidget>
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            widget.title,
+        'icon',  //  widget.title,
             style: widget.titleStyle ?? style,
           ),
          SizedBox(width: 8,),
