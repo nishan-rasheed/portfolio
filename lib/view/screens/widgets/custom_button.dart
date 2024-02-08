@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomButtonWidget extends StatefulWidget {
-  CustomButtonWidget({
+class CommonAnimatedButton extends StatefulWidget {
+  CommonAnimatedButton({
     Key? key,
     required this.title,
     this.titleStyle,
@@ -43,10 +43,10 @@ class CustomButtonWidget extends StatefulWidget {
   final bool isLoading;
 
   @override
-  _CustomButtonWidgetState createState() => _CustomButtonWidgetState();
+  _CommonAnimatedButtonState createState() => _CommonAnimatedButtonState();
 }
 
-class _CustomButtonWidgetState extends State<CustomButtonWidget>
+class _CommonAnimatedButtonState extends State<CommonAnimatedButton>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<Color?> _textAndIconColor;
