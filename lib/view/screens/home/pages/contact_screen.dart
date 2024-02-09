@@ -22,66 +22,65 @@ class ContactScreen extends StatelessWidget {
       height: h-kToolbarHeight,
       child: Column(
         children: [
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(20),
-              child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                       Column(crossAxisAlignment: CrossAxisAlignment.start,
-                       mainAxisAlignment: MainAxisAlignment.center,
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                     Column(crossAxisAlignment: CrossAxisAlignment.start,
+                     mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CommonText(text:AppString.letsChat,
+                        style: AppFonts.style50,
+                        ),
+                        CommonText(text:AppString.letsCreate,
+                        style: AppFonts.style25,
+                        ),
+                      ],
+                     ),
+                  
+                     Container(
+                      width: w*.4,
+                      padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                      decoration: BoxDecoration(
+                        color: AppColor.backgroundColor,
+                        borderRadius: BorderRadius.circular(30),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.shade100,
+                            spreadRadius: 5,blurRadius: 7
+                          )
+                        ]
+                      ),
+                  
+                       child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                       mainAxisSize: MainAxisSize.min,
                         children: [
-                          CommonText(text:AppString.letsChat,
-                          style: AppFonts.style50,
+                         CommonText(text:AppString.sendAmail,
+                          style: AppFonts.style15,
                           ),
-                          CommonText(text:AppString.letsCreate,
-                          style: AppFonts.style25,
+                          cmHeight20,
+                          CommonTextField(hint: 'Enter Your Name',),
+                          cmHeight15,
+                          CommonTextField(hint: 'Enter Your Email',),
+                          cmHeight15,
+                          CommonTextField(maxLines: 5,
+                          hint: 'Enter Your Message'
                           ),
+                     
+                          cmHeight15,
+                     
+                          CommonAnimatedButton(title: 'Submit',
+                          onPressed: () {
+                            customLog('max$h---appbar${kToolbarHeight}--real${HomeAppbar().preferredSize.height}--');
+                          },
+                          ),
+                                            
                         ],
                        ),
-                    
-                       Container(
-                        width: w*.4,
-                        padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
-                        decoration: BoxDecoration(
-                          color: AppColor.backgroundColor,
-                          borderRadius: BorderRadius.circular(30),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.shade100,
-                              spreadRadius: 5,blurRadius: 7
-                            )
-                          ]
-                        ),
-                    
-                         child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                           CommonText(text:AppString.sendAmail,
-                            style: AppFonts.style15,
-                            ),
-                            cmHeight20,
-                            CommonTextField(hint: 'Enter Your Name',),
-                            cmHeight15,
-                            CommonTextField(hint: 'Enter Your Email',),
-                            cmHeight15,
-                            CommonTextField(maxLines: 5,
-                            hint: 'Enter Your Message'
-                            ),
-                       
-                            cmHeight15,
-                       
-                            CommonAnimatedButton(title: 'Submit',
-                            onPressed: () {
-                              customLog('max$h---appbar${kToolbarHeight}--real${HomeAppbar().preferredSize.height}--');
-                            },
-                            ),
-                                              
-                          ],
-                         ),
-                       ),
+                     ),
 
 
-                ],
-              ),
+              ],
             ),
           ),
           Container(
