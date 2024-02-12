@@ -1,14 +1,24 @@
 
 
+// import 'package:flutter/material.dart';
+// import 'package:nishan_profile/constants/app_log.dart';
+// import 'package:nishan_profile/controller/home/home_controller.dart';
+// import 'package:nishan_profile/view/screens/pages/about_me/about_screen.dart';
+// import 'package:nishan_profile/view/screens/pages/contact_me/contact_screen.dart';
+// import 'package:nishan_profile/view/screens/pages/project/project_screen.dart';
+// import 'package:nishan_profile/view/screens/pages/welcome/welcome_screen.dart';
+// import 'package:provider/provider.dart';
+
+
 import 'package:flutter/material.dart';
-import 'package:nishan_profile/constants/app_log.dart';
-import 'package:nishan_profile/controller/home/home_controller.dart';
-import 'package:nishan_profile/view/screens/home/pages/about_screen.dart';
-import 'package:nishan_profile/view/screens/home/pages/contact_screen.dart';
-import 'package:nishan_profile/view/screens/home/pages/project_screen.dart';
-import 'package:nishan_profile/view/screens/home/pages/welcome_screen.dart';
+import 'package:nishan_profile/view/screens/pages/project/project_screen.dart';
 import 'package:provider/provider.dart';
 
+import '../../../constants/app_log.dart';
+import '../../../controller/home/home_controller.dart';
+import 'about_me/about_screen.dart';
+import 'contact_me/contact_screen.dart';
+import 'welcome/welcome_screen.dart';
 
 final welcomeKey = GlobalKey();
   final aboutKey = GlobalKey();

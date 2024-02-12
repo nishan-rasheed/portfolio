@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nishan_profile/constants/app_log.dart';
-import 'package:nishan_profile/view/screens/home/pages/home_body.dart';
+import 'package:nishan_profile/view/screens/pages/home_body.dart';
 
 class HomeController extends ChangeNotifier{
 

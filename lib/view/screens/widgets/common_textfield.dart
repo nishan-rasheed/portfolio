@@ -32,7 +32,7 @@ class CommonTextField extends StatelessWidget {
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide:const BorderSide(color: Colors.cyan)
+          borderSide:const BorderSide(color: Colors.transparent)
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nishan_profile/constants/app_color.dart';
 import 'package:nishan_profile/controller/home/home_controller.dart';
-import 'package:nishan_profile/view/screens/home/home_screen.dart';
+import 'package:nishan_profile/view/screens/pages/home_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 

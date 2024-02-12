@@ -125,9 +125,7 @@ class _CommonAnimatedButtonState extends State<CommonAnimatedButton>
                   children: [
                     animatedBackground(),
                     Center(
-                      child: Text(
-                        'check',
-                       // widget.title,
+                      child: Text(widget.title,
                         style: 
                         TextStyle(
                           color: Colors.green
@@ -148,7 +146,7 @@ class _CommonAnimatedButtonState extends State<CommonAnimatedButton>
       right: 0,
       child: AnimatedContainer(
         duration: widget.duration,
-        // child: Text('sjsxss'),
+         child: Text('sjsxss'),
         width: _isHovering ? 0 : widget.width,
         height: widget.height,
         color: widget.buttonColor,

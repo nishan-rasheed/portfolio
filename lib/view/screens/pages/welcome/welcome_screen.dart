@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:nishan_profile/constants/app_icons.dart';
 import 'package:nishan_profile/view/screens/widgets/common_text.dart';
 import 'package:nishan_profile/view/screens/widgets/custom_button.dart';
-import 'package:nishan_profile/view/test_screen.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import '../../../../constants/app_font_styles.dart';
 
