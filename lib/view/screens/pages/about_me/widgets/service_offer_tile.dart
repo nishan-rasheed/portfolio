@@ -6,8 +6,10 @@ import '../../../widgets/common_text.dart';
 
 class ServiceOfferTile extends StatelessWidget {
   const ServiceOfferTile({
-    super.key,
+    super.key, required this.text,
   });
+
+  final String text;
 
 
   @override
@@ -17,12 +19,15 @@ class ServiceOfferTile extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(30),
       color: Colors.orange,
-      height: h*.3,
+      // height: w*.2,
+      width: w*.2,
+    //  height: 200s,
+    //   width: 200,
       child: Column(
         children: [
           Icon(Icons.app_blocking),
           FittedBox(
-            child: CommonText(text: 'hgchg hgcchg hghcgchsgwembkjbcwj kjweckjwebck kbjecbjewkjcb ljebcjwekc',
+            child: CommonText(text: text,
             style: AppFonts.style30,
             ),
           )

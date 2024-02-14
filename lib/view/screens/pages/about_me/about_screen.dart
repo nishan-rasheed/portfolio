@@ -36,6 +36,16 @@ class AboutScreen extends StatelessWidget {
 
    ];
 
+   List serviceList = [
+   'mobile app development',
+   "web development",
+   "Responsive design",
+    "AWS",
+    "Figma",
+    "Cross platform development"
+
+   ];
+
   @override
   Widget build(BuildContext context) {
     var w =  MediaQuery.of(context).size.width;
@@ -106,18 +116,10 @@ class AboutScreen extends StatelessWidget {
           ),
         ),
 
-          CommonText(text: 'Services i offer :',
-                  style: AppFonts.style30,), 
+         
 
 
-                  Hero(
-              tag: 'move',
-              child: Container(
-                height: 50,
-                width: 50,
-                color: const Color(0xffeb3492),
-              ),
-            ),
+        
 
           //  const Wrap(
           //   spacing: 20,runSpacing: 20,
@@ -126,23 +128,60 @@ class AboutScreen extends StatelessWidget {
           //     ServiceOfferTile(),
           //   ],
           //  ),
+ 
 
 
-           GridView.builder(
-            padding: EdgeInsets.symmetric(horizontal: 30),
-            shrinkWrap: true,
-             gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-               crossAxisCount: ResponsiveBreakpoints.of(context).largerThan(MOBILE)?2:1,
-               crossAxisSpacing:100,
-    mainAxisSpacing:20,
-    childAspectRatio: 1.5
-             ),
-             itemCount: 2,
 
-             itemBuilder: (BuildContext context, int index) {
-               return ServiceOfferTile();
-             },
-           ),
+
+         Row(
+          children: [
+         CommonText(text: 'Services i offer :',
+          style: AppFonts.style30,),
+          Expanded(
+            child: SizedBox(
+              height: w*.2,
+              child: ListView.separated(
+                physics: ScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                itemCount: serviceList.length,
+                separatorBuilder: (BuildContext context, int index) {
+                  return cmWidth10;
+                },
+                itemBuilder: (BuildContext context, int index) {
+                  return  ServiceOfferTile(text:serviceList[index] ,);
+                },
+              ),
+            ),
+          ),
+         ],),
+
+          // ListView.separated(
+          //   shrinkWrap: true,
+          //   itemCount: 2,
+          //   separatorBuilder: (BuildContext context, int index) {
+          //     return cmHeight10;
+          //   },
+          //   itemBuilder: (BuildContext context, int index) {
+          //     return ServiceOfferTile();
+          //   },
+          // ),
+
+
+    //        GridView.builder(
+    //         padding: EdgeInsets.symmetric(horizontal: 30),
+    //         shrinkWrap: true,
+    //          gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+    //            crossAxisCount: ResponsiveBreakpoints.of(context).largerThan(MOBILE)?2:1,
+    //            crossAxisSpacing:100,
+    // mainAxisSpacing:20,
+    // childAspectRatio: 1.5
+    //          ),
+          //    itemCount: 2,
+
+          //    itemBuilder: (BuildContext context, int index) {
+          //      return ServiceOfferTile();
+          //    },
+          //  ),
 
            cmHeight20    
     

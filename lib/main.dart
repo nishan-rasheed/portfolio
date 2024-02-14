@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nishan_profile/constants/app_color.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => HomeController(),)
       ],
       child: MaterialApp(
+            
             builder: (context, child) => ResponsiveBreakpoints.builder(
               child: child!,
               breakpoints: [
@@ -30,6 +32,12 @@ class MyApp extends StatelessWidget {
                 const Breakpoint(start: 801, end: 1920, name: DESKTOP),
                 const Breakpoint(start: 1921, end: double.infinity, name: '4K'),
               ],
+            ),
+            scrollBehavior: MaterialScrollBehavior().copyWith(
+              dragDevices: {
+                PointerDeviceKind.touch,
+                PointerDeviceKind.mouse,
+              }
             ),
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
