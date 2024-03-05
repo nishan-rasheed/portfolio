@@ -16,9 +16,13 @@ class ProjectScreen extends StatelessWidget {
    var h =MediaQuery.of(context).size.height-customAppBarHeight;
     return  Column(
       children: [
-        const PageTitleWidget(
-              title: 'snhvsnsbsn', 
-              note: 'shhsv hvsmvs nvsnbsnb nbsnb s nbsvnbsbn bnsvnb'),
+     
+        const Padding(
+          padding:  EdgeInsets.only(top: customAppBarHeight),
+          child:  PageTitleWidget(
+                title: 'snhvsnsbsn', 
+                note: 'shhsv hvsmvs nvsnbsnb nbsnb s nbsvnbsbn bnsvnb'),
+        ),
         ListView.separated(
           padding: EdgeInsets.symmetric(horizontal: 20),
       shrinkWrap: true,

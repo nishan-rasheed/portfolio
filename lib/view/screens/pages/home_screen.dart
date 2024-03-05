@@ -30,7 +30,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
       // appBar:HomeAppbar() ,
       body:  HomeBodyScreen(image:image1.image ,),
     );

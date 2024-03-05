@@ -45,7 +45,7 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var w =  MediaQuery.of(context).size.width;
-    var h =  MediaQuery.of(context).size.height-customAppBarHeight;
+    var h =  MediaQuery.of(context).size.height+customAppBarHeight;
     return  Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(

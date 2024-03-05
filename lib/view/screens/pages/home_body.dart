@@ -106,14 +106,7 @@ class _HomeBodyScreenState extends State<HomeBodyScreen> {
           controller: _controller,
           child: Column(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: widget.image)
-                ),
-                child: WelcomeScreenWidget(key: welcomeKey,)),
+              WelcomeScreenWidget(key: welcomeKey,),
               AboutScreen(key: aboutKey,),
               ProjectScreen(key: projectKey,),
               ContactScreen(key: contactKey,),

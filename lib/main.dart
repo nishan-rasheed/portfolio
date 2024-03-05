@@ -43,14 +43,15 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: ThemeData(
-              scaffoldBackgroundColor:Colors.transparent,// AppColor.backgroundColor,
+              scaffoldBackgroundColor: AppColor.backgroundColor,
               primarySwatch: Colors.blue,
                 textTheme: GoogleFonts.poppinsTextTheme(
                     Theme.of(context).textTheme,
                   ),
             ),
-            home: HomeScreen()
-            // TestScreen()//HomeScreen(),
+            home:
+             HomeScreen()
+            //TestScreen()//HomeScreen(),
           ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nishan_profile/constants/app_assets.dart';
+import 'package:nishan_profile/constants/app_strings.dart';
 import 'package:nishan_profile/controller/home/home_controller.dart';
 import 'package:nishan_profile/view/screens/widgets/common_text.dart';
 import 'package:nishan_profile/view/screens/widgets/custom_button.dart';
@@ -22,41 +23,51 @@ class WelcomeScreenWidget extends StatelessWidget {
     final h = MediaQuery.of(context).size.height;
 
     return Container(
-      // decoration: BoxDecoration(
+    
+      // decoration: const BoxDecoration(
       //   image: DecorationImage(
       //     fit: BoxFit.cover, 
       //     image: AssetImage(AppAssets.backgroundImg,
           
       //     ))
       // ),
-      height: h-customAppBarHeight,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-         children: [
-         
-          CommonText(text: 'Hello, I\'m Nishan Rasheed\na flutter developer',
-           style:ResponsiveBreakpoints.of(context).isDesktop?
-            AppFonts.style60:AppFonts.style30),
-         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: [
-             SizedBox(
-              width: w*.6,
-              child:CommonText(text: 'I am a frontend developer who loves to work on the web. I am passionate about building simple and elegant solutions to complex problems.',
-              style: 
-              ResponsiveBreakpoints.of(context).isDesktop?
-              AppFonts.style40:AppFonts.style20,
+      height: h,
+      child: Stack(
+        children: [
+          ShaderMask(
+             shaderCallback: (rect) {
+              return LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.black, Colors.transparent],
+              ).createShader(Rect.fromLTRB(0, 0, rect.width, rect.height));
+            },
+            blendMode: BlendMode.dstIn,
+            child: Image.asset(AppAssets.backgroundImg,
+            fit: BoxFit.cover,
+            height: h,width: w,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
+            child: Center(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+               children: [
+               
+                CommonText(text: AppString.welcomeText1,
+                 style:ResponsiveBreakpoints.of(context).isDesktop?
+                  AppFonts.style60:AppFonts.style30),
+            
+                CommonText(text: AppString.jobTitle,
+                   style:ResponsiveBreakpoints.of(context).isDesktop?
+                    AppFonts.style60:AppFonts.style30),
+               
+               ],
               ),
-             ),
-             Consumer<HomeController>(
-          builder: (context, dd, child) =>
-          CommonAnimatedButton(title: dd.showAppbar.toString())
-           )
-           ],
-         ),
-         ],
-        ),
+            ),
+          ),
+        ],
       ),
     );
   }

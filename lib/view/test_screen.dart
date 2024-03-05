@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nishan_profile/constants/app_assets.dart';
 import 'package:nishan_profile/constants/app_spaces.dart';
 import 'package:nishan_profile/view/screens/pages/welcome/welcome_screen.dart';
+import 'package:nishan_profile/view/screens/widgets/common_text.dart';
 import 'package:nishan_profile/view/screens/widgets/home_appbar.dart';
 
 class TestScreen extends StatelessWidget {
@@ -13,32 +14,21 @@ class TestScreen extends StatelessWidget {
     final h = MediaQuery.of(context).size.height;
     return Scaffold(
       // appBar: AppBar(backgroundColor: Colors.transparent,),
-      body: Stack(
-        children: [
-          SingleChildScrollView(
-            child: Column(
-              children: [
-                Container(
-                                     decoration: BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage(AppAssets.backgroundImg))
-                ),
-                child:  WelcomeScreenWidget(),
-                ),
-               
-                Container(height: 400,width: 20,color: Colors.green,),
-                cmHeight20,
-                Container(height: 400,width: 29,color: Colors.green,),
-                cmHeight20,
-                Container(height: 400,width: 30,color: Colors.green,),
-                cmHeight20,
-              ],
-            ),
-          ),
-          HomeAppbar()
-        ],
-      ),
+      body: Container(
+        height: h,width: w,
+        decoration: BoxDecoration(
+          color: Colors.grey.shade400,
+          gradient: LinearGradient(
+            colors: [
+            Colors.amber,
+            Colors.green
+          ]),
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage(AppAssets.backgroundImg))
+        ),
+        child: CommonText(text: 'gccccch gcffcg'),
+      )
     );
   }
 }
