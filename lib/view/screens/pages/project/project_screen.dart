@@ -13,7 +13,7 @@ class ProjectScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
   final w = MediaQuery.of(context).size.width;
-   var h =MediaQuery.of(context).size.height-kToolbarHeight;
+   var h =MediaQuery.of(context).size.height-customAppBarHeight;
     return  Column(
       children: [
         const PageTitleWidget(

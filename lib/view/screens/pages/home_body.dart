@@ -12,6 +12,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:nishan_profile/view/screens/pages/project/project_screen.dart';
+import 'package:nishan_profile/view/screens/widgets/home_appbar.dart';
 import 'package:provider/provider.dart';
 
 import '../../../constants/app_log.dart';
@@ -27,8 +28,11 @@ final welcomeKey = GlobalKey();
 
 class HomeBodyScreen extends StatefulWidget {
   const HomeBodyScreen({
-    super.key,
+    super.key, required this.image,
   });
+
+ final ImageProvider<Object> image;
+
 
   @override
   State<HomeBodyScreen> createState() => _HomeBodyScreenState();
@@ -55,11 +59,24 @@ class _HomeBodyScreenState extends State<HomeBodyScreen> {
     var aboutHeight = aboutKey.currentContext?.size?.height??0;
     var contactHeight = contactKey.currentContext?.size?.height??0;
     _controller.addListener(() {
-      customLog(_controller.offset.toString());
+      
+
+      
+        
+     
       if (_controller.position.extentAfter==0) {
       Provider.of<HomeController>(context,listen: false).changeAppBarHeaderColor(2);
       }
+      
      else if (_controller.offset<welcomeHeight) {
+        
+        if(_controller.offset>welcomeHeight/10){
+          Provider.of<HomeController>(context,listen: false).showAppBAr(true,);
+        }
+        else{
+        Provider.of<HomeController>(context,listen: false).showAppBAr(false,);
+        }
+      
         Provider.of<HomeController>(context,listen: false).changeAppBarHeaderColor(-1);
        
       }
@@ -69,9 +86,8 @@ class _HomeBodyScreenState extends State<HomeBodyScreen> {
       else if (_controller.offset<(welcomeHeight+aboutHeight+projectHeight)) {
         Provider.of<HomeController>(context,listen: false).changeAppBarHeaderColor(1);
       }
-       else {
-        
-      }
+       
+
     });
     // customLog(ww.toString());
   }
@@ -84,17 +100,30 @@ class _HomeBodyScreenState extends State<HomeBodyScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      controller: _controller,
-      child: Column(
-        children: [
-          WelcomeScreenWidget(key: welcomeKey,),
-          AboutScreen(key: aboutKey,),
-          ProjectScreen(key: projectKey,),
-          ContactScreen(key: contactKey,),
-          
-        ],
-      ),
+    return Stack(
+      children: [
+        SingleChildScrollView(
+          controller: _controller,
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: widget.image)
+                ),
+                child: WelcomeScreenWidget(key: welcomeKey,)),
+              AboutScreen(key: aboutKey,),
+              ProjectScreen(key: projectKey,),
+              ContactScreen(key: contactKey,),
+              
+            ],
+          ),
+        ),
+
+        HomeAppbar(),
+      ],
     );
   }
 }

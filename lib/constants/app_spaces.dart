@@ -11,3 +11,7 @@
  const cmWidth10 = SizedBox(width: 10,);
  const cmWidth15 = SizedBox(width: 15,);
  const cmWidth20 = SizedBox(width: 20,);
+
+
+
+  const customAppBarHeight = 60.0;

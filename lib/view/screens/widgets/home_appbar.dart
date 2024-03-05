@@ -1,8 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:nishan_profile/constants/app_color.dart';
 import 'package:nishan_profile/constants/app_spaces.dart';
 import 'package:nishan_profile/controller/home/home_controller.dart';
+import 'package:nishan_profile/view/screens/widgets/common_text.dart';
 import 'package:provider/provider.dart';
 
 import '../../../constants/app_icons.dart';
@@ -11,6 +13,9 @@ class HomeAppbar extends StatelessWidget implements PreferredSizeWidget{
    HomeAppbar({
     super.key,
   });
+
+
+  
 
  
    List headerButton = [
@@ -23,13 +28,13 @@ class HomeAppbar extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context) {
     return Consumer<HomeController>(
       builder: (context, homeValue, child) =>
-       SizedBox(
-        height: kToolbarHeight,
+       Container(color:homeValue.showAppbar?AppColor.backgroundColor:null,
+        height:customAppBarHeight,// kToolbarHeight,
          child: Padding(
            padding: const EdgeInsets.symmetric(horizontal: 15),
            child: Row(
             children: [
-              Icon(Icons.home),
+              const Icon(Icons.home),
             //  IconButton(
             //   onPressed: (){
             //     Scrollable.ensureVisible(
@@ -60,7 +65,7 @@ class HomeAppbar extends StatelessWidget implements PreferredSizeWidget{
                        // Text(headerButton[index]),
                        Padding(
                          padding: const EdgeInsets.symmetric(vertical: 5),
-                         child: Text(headerButton[index]),
+                         child: CommonText(text: headerButton[index],),
                        ),
                        Positioned(
                          bottom: 0,
@@ -96,5 +101,5 @@ class HomeAppbar extends StatelessWidget implements PreferredSizeWidget{
   }
   
   @override
-  Size get preferredSize =>  const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize =>  const Size.fromHeight(customAppBarHeight);
 }

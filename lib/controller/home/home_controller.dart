@@ -4,11 +4,17 @@ import 'package:nishan_profile/view/screens/pages/home_body.dart';
 
 class HomeController extends ChangeNotifier{
 
-  
-  
-  int selectedAppBarIndex = -1;
+   bool showAppbar = false;
+   showAppBAr(bool v,){
+     showAppbar = v;
+     notifyListeners();
+   }
 
-  changeAppBarHeaderColor(int v){
+
+  int selectedAppBarIndex = -1;
+ 
+
+  changeAppBarHeaderColor(int v,){
   selectedAppBarIndex = v;
   notifyListeners();
   }

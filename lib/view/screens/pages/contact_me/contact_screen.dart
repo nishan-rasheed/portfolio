@@ -18,7 +18,7 @@ class ContactScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var h =MediaQuery.of(context).size.height-kToolbarHeight;
+    var h =MediaQuery.of(context).size.height-customAppBarHeight;
     var w = MediaQuery.of(context).size.width;
     return  SizedBox(
       height: h,
@@ -97,7 +97,7 @@ class ContactScreen extends StatelessWidget {
                          
                               CommonAnimatedButton(title: 'Submit',
                               onPressed: () {
-                                customLog('max$h---appbar${kToolbarHeight}--real${HomeAppbar().preferredSize.height}--');
+                                customLog('max$h---appbar${customAppBarHeight}--real${HomeAppbar().preferredSize.height}--');
                               },
                               ),
                                                 

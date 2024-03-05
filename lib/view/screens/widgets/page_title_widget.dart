@@ -12,17 +12,14 @@ class PageTitleWidget extends StatelessWidget {
    final String note;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical:30),
-      child: Column(
-        children: [
-          CommonText(text: title,
-                style: AppFonts.style40,),
-                const AppDivider(),
-                CommonText(text: note,
-                style: AppFonts.style20,),
-        ],
-      ),
+    return Column(
+      children: [
+        CommonText(text: title,
+              style: AppFonts.style40,),
+              const AppDivider(),
+              CommonText(text: note,
+              style: AppFonts.style20,),
+      ],
     );
   }
 }

@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nishan_profile/constants/app_color.dart';
 import 'package:nishan_profile/controller/home/home_controller.dart';
 import 'package:nishan_profile/view/screens/pages/home_screen.dart';
+import 'package:nishan_profile/view/test_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -42,13 +43,14 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: ThemeData(
-              scaffoldBackgroundColor: AppColor.backgroundColor,
+              scaffoldBackgroundColor:Colors.transparent,// AppColor.backgroundColor,
               primarySwatch: Colors.blue,
                 textTheme: GoogleFonts.poppinsTextTheme(
                     Theme.of(context).textTheme,
                   ),
             ),
-            home:  HomeScreen(),
+            home: HomeScreen()
+            // TestScreen()//HomeScreen(),
           ),
     );
   }
