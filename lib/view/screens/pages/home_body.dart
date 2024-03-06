@@ -28,10 +28,9 @@ final welcomeKey = GlobalKey();
 
 class HomeBodyScreen extends StatefulWidget {
   const HomeBodyScreen({
-    super.key, required this.image,
+    super.key, 
   });
 
- final ImageProvider<Object> image;
 
 
   @override

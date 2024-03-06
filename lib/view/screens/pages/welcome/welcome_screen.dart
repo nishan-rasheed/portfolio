@@ -22,53 +22,45 @@ class WelcomeScreenWidget extends StatelessWidget {
     final w = MediaQuery.of(context).size.width;
     final h = MediaQuery.of(context).size.height;
 
-    return Container(
-    
-      // decoration: const BoxDecoration(
-      //   image: DecorationImage(
-      //     fit: BoxFit.cover, 
-      //     image: AssetImage(AppAssets.backgroundImg,
-          
-      //     ))
-      // ),
-      height: h,
-      child: Stack(
-        children: [
-          ShaderMask(
-             shaderCallback: (rect) {
-              return LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Colors.black, Colors.transparent],
-              ).createShader(Rect.fromLTRB(0, 0, rect.width, rect.height));
-            },
-            blendMode: BlendMode.dstIn,
-            child: Image.asset(AppAssets.backgroundImg,
-            fit: BoxFit.cover,
-            height: h,width: w,
-            ),
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        ShaderMask(
+           shaderCallback: (rect) {
+            return LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Colors.black, Colors.transparent],
+            ).createShader(Rect.fromLTRB(0, 0, rect.width, rect.height));
+          },
+          blendMode: BlendMode.dstIn,
+          child: Image.asset(AppAssets.backgroundImg,
+          fit: BoxFit.cover,
+          height: h,width: w,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
-            child: Center(
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-               children: [
-               
-                CommonText(text: AppString.welcomeText1,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
+          child: Center(
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+             children: [
+             
+              CommonText(text: AppString.welcomeText1,
+               style:ResponsiveBreakpoints.of(context).isDesktop?
+                AppFonts.style60:AppFonts.style30),
+          
+              CommonText(text: AppString.jobTitle,
                  style:ResponsiveBreakpoints.of(context).isDesktop?
                   AppFonts.style60:AppFonts.style30),
-            
-                CommonText(text: AppString.jobTitle,
-                   style:ResponsiveBreakpoints.of(context).isDesktop?
-                    AppFonts.style60:AppFonts.style30),
-               
-               ],
-              ),
+              Spacer(),
+              CommonAnimatedButton(title: 'Resume')    
+             
+             ],
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

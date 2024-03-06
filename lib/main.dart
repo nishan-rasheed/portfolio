@@ -4,12 +4,30 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nishan_profile/constants/app_color.dart';
 import 'package:nishan_profile/controller/home/home_controller.dart';
 import 'package:nishan_profile/view/screens/pages/home_screen.dart';
+import 'package:nishan_profile/view/screens/splash_screen.dart';
 import 'package:nishan_profile/view/test_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+import 'constants/app_assets.dart';
+
 void main() {
-  runApp( MyApp());
+
+  final binding = WidgetsFlutterBinding.ensureInitialized();
+
+  binding.addPostFrameCallback((_) async {
+    Element? context = binding.renderViewElement;
+    if(context != null)
+      {
+
+        precacheImage(const AssetImage(AppAssets.backgroundImg), context);
+        // for(var asset in _allAsset)
+        // {
+        //   precacheImage(AssetImage(asset), context);
+        // }
+      }
+  });
+  runApp( const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -49,8 +67,8 @@ class MyApp extends StatelessWidget {
                     Theme.of(context).textTheme,
                   ),
             ),
-            home:
-             HomeScreen()
+            home:SplashScreen()
+             //HomeScreen()
             //TestScreen()//HomeScreen(),
           ),
     );
