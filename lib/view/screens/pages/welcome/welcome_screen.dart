@@ -10,7 +10,7 @@ import '../../../../constants/app_font_styles.dart';
 import '../../../../constants/app_spaces.dart';
 
 class WelcomeScreenWidget extends StatelessWidget {
-   WelcomeScreenWidget({
+   const WelcomeScreenWidget({
     super.key,
   });
 
@@ -26,7 +26,7 @@ class WelcomeScreenWidget extends StatelessWidget {
       children: [
         ShaderMask(
            shaderCallback: (rect) {
-            return LinearGradient(
+            return const LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [Colors.black, Colors.transparent],
