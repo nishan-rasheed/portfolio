@@ -13,21 +13,28 @@ class TestScreen extends StatelessWidget {
     final w = MediaQuery.of(context).size.width;
     final h = MediaQuery.of(context).size.height;
     return Scaffold(
-      // appBar: AppBar(backgroundColor: Colors.transparent,),
-      body: Container(
-        height: h,width: w,
-        decoration: BoxDecoration(
-          color: Colors.grey.shade400,
-          gradient: LinearGradient(
-            colors: [
-            Colors.amber,
-            Colors.green
-          ]),
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage(AppAssets.backgroundImg))
-        ),
-        child: CommonText(text: 'gccccch gcffcg'),
+      // extendBodyBehindAppBar: true,
+    //  appBar: HomeAppbar(),
+    //  AppBar(leading: Hero(
+    //         tag: 'splash',
+    //         child: Icon(Icons.home,)),),
+      body: Stack(
+        children: [
+          Container(
+            height: h,width: w,
+            decoration: BoxDecoration(
+              color: Colors.grey.shade400,
+              image: DecorationImage(image: AssetImage(AppAssets.backgroundImg))
+              // gradient: LinearGradient(
+              //   colors: [
+              //   Colors.amber,
+              //   Colors.green
+              // ]),
+            ),
+            child: CommonText(text: 'gccccch gcffcg'),
+          ),
+          HomeAppbar(),
+        ],
       )
     );
   }

@@ -99,23 +99,21 @@ class _HomeBodyScreenState extends State<HomeBodyScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        SingleChildScrollView(
-          controller: _controller,
-          child: Column(
-            children: [
-              WelcomeScreenWidget(key: welcomeKey,),
-              AboutScreen(key: aboutKey,),
-              ProjectScreen(key: projectKey,),
-              ContactScreen(key: contactKey,),
-              
-            ],
-          ),
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: HomeAppbar(),
+      body: SingleChildScrollView(
+        controller: _controller,
+        child: Column(
+          children: [
+             WelcomeScreenWidget(key: welcomeKey,),
+            AboutScreen(key: aboutKey,),
+            ProjectScreen(key: projectKey,),
+            ContactScreen(key: contactKey,),
+            
+          ],
         ),
-
-        HomeAppbar(),
-      ],
+      ),
     );
   }
 }

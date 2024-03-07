@@ -28,13 +28,16 @@ class HomeAppbar extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context) {
     return Consumer<HomeController>(
       builder: (context, homeValue, child) =>
-       Container(color:homeValue.showAppbar?AppColor.backgroundColor:null,
+       Container(
+       color:homeValue.showAppbar?AppColor.backgroundColor:null,
         height:customAppBarHeight,// kToolbarHeight,
          child: Padding(
            padding: const EdgeInsets.symmetric(horizontal: 15),
            child: Row(
             children: [
-              const Icon(Icons.home),
+              Hero(
+            tag: 'splash',
+            child: Icon(Icons.home,)),
             //  IconButton(
             //   onPressed: (){
             //     Scrollable.ensureVisible(

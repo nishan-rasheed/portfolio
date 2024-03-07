@@ -15,7 +15,6 @@ class WelcomeScreenWidget extends StatelessWidget {
   });
 
 
-  String img ='https://images.unsplash.com/photo-1548685913-fe6678babe8d?q=80&w=2038&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +52,7 @@ class WelcomeScreenWidget extends StatelessWidget {
               CommonText(text: AppString.jobTitle,
                  style:ResponsiveBreakpoints.of(context).isDesktop?
                   AppFonts.style60:AppFonts.style30),
-              Spacer(),
+              
               CommonAnimatedButton(title: 'Resume')    
              
              ],
