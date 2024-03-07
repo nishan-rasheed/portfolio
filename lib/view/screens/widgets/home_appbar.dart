@@ -5,6 +5,7 @@ import 'package:nishan_profile/constants/app_color.dart';
 import 'package:nishan_profile/constants/app_spaces.dart';
 import 'package:nishan_profile/controller/home/home_controller.dart';
 import 'package:nishan_profile/view/screens/widgets/common_text.dart';
+import 'package:nishan_profile/view/test_image_screen.dart';
 import 'package:provider/provider.dart';
 
 import '../../../constants/app_icons.dart';
@@ -35,7 +36,7 @@ class HomeAppbar extends StatelessWidget implements PreferredSizeWidget{
            padding: const EdgeInsets.symmetric(horizontal: 15),
            child: Row(
             children: [
-              Hero(
+              const Hero(
             tag: 'splash',
             child: Icon(Icons.home,)),
             //  IconButton(
@@ -91,7 +92,11 @@ class HomeAppbar extends StatelessWidget implements PreferredSizeWidget{
          
                const Spacer(),
               
-               SvgPicture.asset(AppIcons.gitIcon,height: 30,width: 30,),
+               InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>const TestImageScreen(),));
+                },
+                child: SvgPicture.asset(AppIcons.gitIcon,height: 30,width: 30,)),
                cmWidth10,
                SvgPicture.asset(AppIcons.linkedinIcon,height: 30,width: 30,),
                
