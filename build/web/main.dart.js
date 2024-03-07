@@ -19299,8 +19299,8 @@ s=new A.eJ(new A.akY(r,o,n),null,new A.akZ(r,o,n,null))
 r.a=s
 n.U(0,s)
 return p},
-aqC(a,b,c){var s=null
-return new A.rb(A.arN(s,s,new A.rC(a,1,s)),c,b,s,s)},
+aqC(a,b,c,d){var s=null
+return new A.rb(A.arN(s,s,new A.qj(a,s,s)),d,c,b,s)},
 akY:function akY(a,b,c){this.a=a
 this.b=b
 this.c=c},
@@ -73862,16 +73862,15 @@ A.a5W.prototype={
 $2(a,b){return new A.qV(B.l,null)},
 $S:455}
 A.a5V.prototype={
-$2(a,b){var s=t.E
-return new A.rj(A.pb(A.a([A.aqC("https://d33wubrfki0l68.cloudfront.net/19c708670a1f21231c1e2efa6ba38dbf52b15343/3237e/assets/jpeg/dopefolio.jpeg",this.a,this.b*0.6),B.wA,A.lY(A.e5(A.a([A.dE($.qa(),"Project Title"),B.iJ,A.dE($.aoq(),"gcgm hvnb v,nvn ,jv,vv, mnmvmn .kjkbk.jb .kjb.kbjjbk kbjkjb\nn,vn ,vv,\nn uglugli ,klg]nl \nkjg.gnv,v ,jhv,vj mjv,vhv,kj"),B.iJ,A.dE($.WT(),"View more")],s),B.ba,B.qD,B.S),1)],s),B.aj,B.a2,B.S),null)},
+$2(a,b){var s=null,r=t.E
+return new A.rj(A.pb(A.a([new A.rb(A.arN(s,s,new A.rC("https://d33wubrfki0l68.cloudfront.net/19c708670a1f21231c1e2efa6ba38dbf52b15343/3237e/assets/jpeg/dopefolio.jpeg",1,s)),this.b*0.6,this.a,s,s),B.wA,A.lY(A.e5(A.a([A.dE($.qa(),"Project Title"),B.iJ,A.dE($.aoq(),"gcgm hvnb v,nvn ,jv,vv, mnmvmn .kjkbk.jb .kjb.kbjjbk kbjkjb\nn,vn ,vv,\nn uglugli ,klg]nl \nkjg.gnv,v ,jhv,vj mjv,vhv,kj"),B.iJ,A.dE($.WT(),"View more")],r),B.ba,B.qD,B.S),1)],r),B.aj,B.a2,B.S),s)},
 $S:456}
 A.Nu.prototype={
-L(a){var s,r,q,p=null,o=t.w,n=A.be(a,p,o).w
-o=A.be(a,p,o).w
-s=A.arN(p,p,new A.qj("assets/images/header.jpg",p,p))
-r=A.dE(A.arO(a).w?$.aor():$.qa(),"Hello,\nI'm Nishan Rasheed")
-q=t.E
-return A.tj(B.a0,A.a([new A.LT(new A.abN(),B.fX,new A.rb(s,n.a.a,o.a.b,B.yM,p),p),new A.cQ(B.EU,A.lM(A.e5(A.a([r,A.dE(A.arO(a).w?$.aor():$.qa(),"a Flutter developer"),A.Z1(p,"Resume")],q),B.ba,B.qD,B.S),p,p),p)],q),B.W,B.c8)}}
+L(a){var s,r=null,q=t.w,p=A.be(a,r,q).w
+p=A.aqC("assets/images/header.jpg",B.yM,A.be(a,r,q).w.a.b,p.a.a)
+q=A.dE(A.arO(a).w?$.aor():$.qa(),"Hello,\nI'm Nishan Rasheed")
+s=t.E
+return A.tj(B.a0,A.a([new A.LT(new A.abN(),B.fX,p,r),new A.cQ(B.EU,A.lM(A.e5(A.a([q,A.dE(A.arO(a).w?$.aor():$.qa(),"a Flutter developer"),A.Z1(r,"Resume")],s),B.ba,B.qD,B.S),r,r),r)],s),B.W,B.c8)}}
 A.abN.prototype={
 $1(a){var s,r=new A.y(0,0,a.c-a.a,a.d-a.b),q=B.fQ.a2(null).RI(r)
 r=B.fP.a2(null).RI(r)
@@ -74013,7 +74012,7 @@ A.K0.prototype={
 L(a){return A.e5(A.a([A.dE($.avq(),"snhvsnsbsn"),B.xF,A.dE($.aop(),"shhsv hvsmvs nvsnbsnb nbsnb s nbsvnbsbn bnsvnb")],t.E),B.aj,B.a2,B.S)}}
 A.tu.prototype={
 L(a){var s=null
-return A.amT(new A.vo(new A.CX(s,s,1/0,56),s),s,A.e5(A.a([A.lM(A.aqC("assets/images/header.jpg",300,200),s,s),B.DG],t.E),B.aj,B.a2,B.S),!1)}}
+return A.amT(new A.vo(new A.CX(s,s,1/0,56),s),s,A.e5(A.a([A.lM(A.aqC("assets/images/header.jpg",s,300,200),s,s),B.DG],t.E),B.aj,B.a2,B.S),!1)}}
 A.bN.prototype={
 T(a,b){return new A.bN(this.a+b.a,this.b+b.b)},
 X(a,b){return new A.bN(this.a-b.a,this.b-b.b)},
