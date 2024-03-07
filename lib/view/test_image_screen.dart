@@ -11,7 +11,7 @@ class TestImageScreen extends StatelessWidget {
       appBar: AppBar(),
       body: Column(
         children: [
-          Center(child:  Image.network(AppAssets.backgroundImg,
+          Center(child:  Image.asset(AppAssets.backgroundImg,
           height: 300,width: 200,
           ),),
 
