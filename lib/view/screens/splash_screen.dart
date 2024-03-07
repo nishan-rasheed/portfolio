@@ -28,9 +28,9 @@ class _SplashScreenState extends State<SplashScreen> {
     //  });
     // // after 3 second it will navigate
     
-    // Future.delayed(const Duration(seconds: 3)).then((val) {
-    //  Navigator.push(context, MaterialPageRoute(builder: (context) =>const HomeBodyScreen(),));
-    // });
+    Future.delayed(const Duration(seconds: 3)).then((val) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) =>const HomeBodyScreen(),));
+    });
   }
 
 
@@ -39,15 +39,10 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.amber,
-      body: InkWell(
-        onTap: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) =>const HomeBodyScreen(),));
-        },
-        child: Center(
-          child: Hero(
-            tag: 'splash',
-            child: Icon(Icons.home,size: 100,)),
-        ),
+      body: Center(
+        child: Hero(
+          tag: 'splash',
+          child: Icon(Icons.home,size: 100,)),
       ),
     );
   }

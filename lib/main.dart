@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
               }
             ),
             debugShowCheckedModeBanner: false,
-            title: 'Flutter Demo',
+            title: 'Nishan Rasheed',
             theme: ThemeData(
               scaffoldBackgroundColor: AppColor.backgroundColor,
               primarySwatch: Colors.blue,
