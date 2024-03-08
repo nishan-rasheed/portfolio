@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
                 const Breakpoint(start: 1921, end: double.infinity, name: '4K'),
               ],
             ),
-            scrollBehavior: MaterialScrollBehavior().copyWith(
+            scrollBehavior: const MaterialScrollBehavior().copyWith(
               dragDevices: {
                 PointerDeviceKind.touch,
                 PointerDeviceKind.mouse,
@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
                     Theme.of(context).textTheme,
                   ),
             ),
-            home:SplashScreen()
+            home:const SplashScreen()
              //HomeScreen()
             //TestScreen()//HomeScreen(),
           ),
