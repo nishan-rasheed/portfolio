@@ -1,4 +1,4 @@
 class AppAssets {
 
-  static const backgroundImg = 'assets/images/header.jpg';
+  static const backgroundImg = 'assets/images/bgImage.jpg';
 }
