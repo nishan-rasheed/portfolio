@@ -16,22 +16,23 @@ class ServiceOfferTile extends StatelessWidget {
   Widget build(BuildContext context) {
     var w =  MediaQuery.of(context).size.width;
     var h =  MediaQuery.of(context).size.height;
-    return Container(
-      padding: EdgeInsets.all(30),
-      color: Colors.orange,
-      // height: w*.2,
-      width: w*.2,
-    //  height: 200s,
-    //   width: 200,
-      child: Column(
-        children: [
-          Icon(Icons.app_blocking),
-          FittedBox(
-            child: CommonText(text: text,
+    return AspectRatio(
+      aspectRatio: 5/5,
+      child: Container(
+        
+        color: Colors.orange,
+        // height: w*.2,
+        // width: w*.2,
+      //  height: 200s,
+      //   width: 200,
+        child: Column(
+          children: [
+            Icon(Icons.app_blocking),
+            CommonText(text: text,
             style: AppFonts.style30,
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }

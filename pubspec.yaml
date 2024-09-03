@@ -40,6 +40,7 @@ dependencies:
   provider: ^6.0.5
   flutter_svg: ^2.0.5
   responsive_framework: ^1.1.1
+  responsive_sizer: ^3.3.0+1
   # flutter_screenutil: ^5.9.0
 
 dev_dependencies:

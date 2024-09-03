@@ -129,19 +129,30 @@ class AboutScreen extends StatelessWidget {
             CommonText(text: 'Services i offer :',
             style: AppFonts.style30,),
             SizedBox(
-              height: h*.5,
-              child: ListView.separated(
-                physics: ScrollPhysics(),
-                scrollDirection: Axis.horizontal,
-                itemCount: serviceList.length,
-                separatorBuilder: (BuildContext context, int index) {
-                  return cmWidth10;
-                },
-                itemBuilder: (BuildContext context, int index) {
-                  return  ServiceOfferTile(text:serviceList[index] ,);
-                },
+              height: h*.3,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  ...List.generate(
+                      serviceList.length, 
+                      (index) => ServiceOfferTile(text:serviceList[index] ,))
+                ],
               ),
             ),
+            // SizedBox(
+            //   height: h*.3,
+            //   child: ListView.separated(
+            //     physics: ScrollPhysics(),
+            //     scrollDirection: Axis.horizontal,
+            //     itemCount: serviceList.length,
+            //     separatorBuilder: (BuildContext context, int index) {
+            //       return cmWidth10;
+            //     },
+            //     itemBuilder: (BuildContext context, int index) {
+            //       return  ServiceOfferTile(text:serviceList[index] ,);
+            //     },
+            //   ),
+            // ),
             CommonAnimatedButton(title: 'Hire me')
            ],),
          ),
